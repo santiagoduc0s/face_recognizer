@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  face_recognizer:
+    build: .
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./rest.py:/app/rest.py
+      - ./uploads:/app/uploads
+      - ./registered_faces:/app/registered_faces
